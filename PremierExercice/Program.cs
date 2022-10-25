@@ -7,8 +7,37 @@ namespace PremierExercice
 
         static void Main(string[] args)
         {
+            /*Console.WriteLine("table demension est  10  est suffisant ? (Y/N)");*/
+            int max=10;
+            int[] table = new int[max];
 
-            int realNbr = CheckStrNumber();
+            table[0] = 1;
+            table[1] = 2;
+            table[2] = 3;
+            table[3] = 4;
+
+            ShowTable(table);
+            int i=0;
+            while (table[i])
+            {
+                i++;
+            }
+
+            for (int i = 9; i >= 0; i--)
+            {
+
+
+                int nbr = CheckStrNumber();
+               
+                {
+                    table[i] = nbr;
+                }
+                
+
+
+            }
+
+            /*int realNbr = CheckStrNumber();
 
             if (EstPremier(realNbr))
             {
@@ -17,11 +46,17 @@ namespace PremierExercice
             else
             {
                 Console.WriteLine(realNbr + " est non premier");
-            }
+            }*/
 
             Console.ReadKey();
         }
-
+        public static void ShowTable(int[] table)
+        {
+            for (int i = 0; i < table.Length; i++)
+            {
+                Console.WriteLine(table[i]);
+            }
+        }
         public static int CheckStrNumber()
         {
             bool isNumeric;
