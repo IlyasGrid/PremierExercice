@@ -8,22 +8,7 @@ namespace PremierExercice
         static void Main(string[] args)
         {
 
-
-            bool isNumeric;
-            int realNbr; // ou on va stocker le nbr
-            /*bool estPremier = true;*/
-            do
-            {
-                Console.WriteLine("Entrez un nombre");
-                string strnumber = Console.ReadLine();
-                isNumeric = int.TryParse(strnumber, out realNbr );
-                
-                Console.WriteLine();
-
-            } while (!isNumeric);
-
-
-
+            int realNbr = CheckStrNumber();
 
             if (EstPremier(realNbr))
             {
@@ -37,7 +22,22 @@ namespace PremierExercice
             Console.ReadKey();
         }
 
+        public static int CheckStrNumber()
+        {
+            bool isNumeric;
+            int realNbr; // ou on va stocker le nbr
+            /*bool estPremier = true;*/
+            do
+            {
+                Console.WriteLine("Entrez un nombre");
+                string strnumber = Console.ReadLine();
+                isNumeric = int.TryParse(strnumber, out realNbr);
 
+                Console.WriteLine();
+
+            } while (!isNumeric);
+            return realNbr;
+        }
         public static bool EstPremier(int number)
         {
             if (number <= 2)
