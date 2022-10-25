@@ -16,7 +16,7 @@ namespace PremierExercice
             {
                 Console.WriteLine("Entrez un nombre");
                 string strnumber = Console.ReadLine();
-                isNumeric = int.TryParse(strnumber, out realNbr);
+                isNumeric = int.TryParse(strnumber, out realNbr );
                 
                 Console.WriteLine();
 
